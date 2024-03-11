@@ -1,7 +1,7 @@
 # Frequency-Controlled-Diffusion-Model
 
 # Introduction
-This project tackles the problem of text-guided image-to-image translation (I2I), i.e., translating a source image with a natural-language text prompt. We harness the immense generative power of the pre-trained large-scale text-to-image diffusion model and extend it from text-to-image generation to text-guided I2I, providing intelligent tools for image manipulation or editing tasks. <br>
+This project tackles the problem of text-guided image-to-image translation (I2I), i.e., translating a source image with a natural-language text prompt. We harness the immense generative power of the pre-trained large-scale text-to-image diffusion model and extend it from text-to-image generation to text-guided I2I, providing intelligent tools for image manipulation tasks. <br>
 
 Observing that I2I has diverse application scenarios emphasizing different correlations (e.g., style, structure, layout, contour, etc.) between the source and translated images, it is difficult for a single existing method to suit all scenarios well. This inspires us to design a unified framework enabling flexible control over diverse I2I correlations and thus applies to diverse I2I application scenarios. <br>
 
@@ -15,5 +15,7 @@ Below is the overall model architecture, please refer to the paper (coming soon)
             <p style="line-height:180%">Figure 1. The overall architecture of FCDiffusion, as well as details of important modules and operations. FCDiffusion comprises the pretrained LDM, a Frequency Filtering Module (FFM), and a FreqControlNet (FCNet). The FFM applies DCT filtering to the source image features, extracting the filtered image features carrying a specific DCT frequency band as control signal, which controls the denoising process of LDM through the FCNet. FCDiffusion integrates multiple control branches with different DCT filters in the FFM, these DCT filters extract different DCT frequency bands to control different I2I correlations.
 	    </p>
 	    </div>
+# Dataset
+For training of  use the LAION Aesthetics 6.5+ dataset for 
 
 
