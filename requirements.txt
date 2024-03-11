@@ -4,7 +4,7 @@ pytorch==1.12.1
 torchvision==0.13.1
 numpy==1.23.1
 albumentations==0.4.3
-opencv-python
+opencv-contrib-python==4.9.0
 pudb==2019.2
 imageio==2.27.0
 imageio-ffmpeg==0.4.2
