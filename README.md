@@ -21,9 +21,8 @@ Since we do not train the large-scale latent diffusion model (LDM) from scratch 
 
 # Environment
 First create a new conda virtual environment: <br>
-<pre>
 <code>
 conda create -n env_name python=3.8
 </code>
-</pre>
+
 
