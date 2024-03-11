@@ -20,9 +20,14 @@ Below is the overall model architecture, please refer to the paper (coming soon)
 Since we do not train the large-scale latent diffusion model (LDM) from scratch but rather train a frequency-based control network of the pre-trained LDM, a small and high-quality subset of LAION 5B is preferable. Therefore, we use **LAION Aesthetics 6.5+** as the training dataset of our model. It comprises 625K image-text pairs with predicted aesthetics scores of 6.5 or higher.
 
 # Environment
-First create a new conda virtual environment: <br>
-<code>
+First, create a new conda virtual environment: <br>
+<pre><code>
 conda create -n env_name python=3.8
-</code>
+</code></pre>
+Then, install pytorch related packages using conda: <br>
+<pre><code>
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
+</code></pre>
+
 
 
