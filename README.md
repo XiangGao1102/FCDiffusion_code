@@ -28,6 +28,9 @@ Then, install pytorch related packages using conda: <br>
 <pre><code>
 conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
 </code></pre>
-
+Last, install the required packages in the requirements.txt: <br>
+<pre><code>
+pip install -r requirements.txt
+</code></pre>
 
 
