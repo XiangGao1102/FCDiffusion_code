@@ -15,9 +15,6 @@ Below is the overall model architecture, please refer to the paper (coming soon)
             <p style="line-height:180%">Figure 1. The overall architecture of FCDiffusion, as well as details of important modules and operations. FCDiffusion comprises the pretrained LDM, a Frequency Filtering Module (FFM), and a FreqControlNet (FCNet). The FFM applies DCT filtering to the source image features, extracting the filtered image features carrying a specific DCT frequency band as control signal, which controls the denoising process of LDM through the FCNet. FCDiffusion integrates multiple control branches with different DCT filters in the FFM, these DCT filters extract different DCT frequency bands to control different I2I correlations (e.g., image style, structure, layout, contour, etc.).
 	    </p>
 	    </div>
-     
-# Dataset
-Since we do not train the large-scale latent diffusion model (LDM) from scratch but rather train a frequency-based control network of the pre-trained LDM, a small and high-quality subset of LAION 5B is preferable. Therefore, we use **LAION Aesthetics 6.5+** as the training dataset of our model. It comprises 625K image-text pairs with predicted aesthetics scores of 6.5 or higher.
 
 # Environment
 First, create a new conda virtual environment: <br>
@@ -33,4 +30,5 @@ Last, install the required packages in the requirements.txt: <br>
 pip install -r requirements.txt
 </code></pre>
 
-
+# Dataset
+Since we do not train the large-scale latent diffusion model (LDM) from scratch but rather train a frequency-based control network of the pre-trained LDM, a small and high-quality subset of LAION 5B is preferable. Therefore, we use **LAION Aesthetics 6.5+** as the training dataset of our model. It comprises 625K image-text pairs with predicted aesthetics scores of 6.5 or higher.
