@@ -17,6 +17,6 @@ Below is the overall model architecture, please refer to the paper (coming soon)
 	    </div>
      
 # Dataset
-Since we do not train the large-scale latent diffusion model (LDM) from scratch but rather train a frequency-based control network, a small and high-quality subset of LAION 5B is preferable. Therefore, we use **LAION Aesthetics 6.5+**, a small subset of LAION 5B containing 625K image-text pairs with predicted aesthetics scores of 6.5 or higher, as the training dataset of our model.
+Since we do not train the large-scale latent diffusion model (LDM) from scratch but rather train a frequency-based control network of the pre-trained LDM, a small and high-quality subset of LAION 5B is preferable. Therefore, we use **LAION Aesthetics 6.5+** as the training dataset of our model. It comprises 625K image-text pairs with predicted aesthetics scores of 6.5 or higher.
 
 
