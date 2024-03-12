@@ -36,6 +36,7 @@ def load_model_from_config(config, ckpt, device=torch.device("cuda"), verbose=Fa
 # setting of model config and model checkpoint
 yaml_file_path = "configs/model_config.yaml"
 # set the checkpoint path in the lightning_logs dir
+# the model checkpoint should be consistent with the "control_mode" parameter in the yaml config file
 ckpt_file_path = "lightning_logs/fcdiffusion_mid_pass_checkpoint/epoch=0-step=9999.ckpt"
 scale_factor = 0.18215
 
