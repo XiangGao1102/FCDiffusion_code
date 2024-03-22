@@ -53,7 +53,7 @@ model.eval()
 
 # set test image path and target prompt
 test_img_path = 'test_img.jpg'   # the path of the test image to be translated
-target_prompt = 'photo of a bed room'  # the target text prompt for image-to-image translation
+target_prompt = 'photo of a music room'  # the target text prompt for image-to-image translation
 test_res_num = 4
 
 
