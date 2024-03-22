@@ -36,4 +36,9 @@ Since we do not train the large-scale latent diffusion model (LDM) from scratch 
                 <div align="center">
                     <img src="pictures/training_set.png" width="70%"> <br>
 		</div>
-	    </div>
+</div>
+
+Then, run the python script **training_data_prepare.py** to create the json file of the training dataset:
+<pre><code>
+python training_data_prepare.py
+</code></pre>
