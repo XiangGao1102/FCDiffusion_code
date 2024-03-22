@@ -7,6 +7,9 @@ from torch.utils.data import DataLoader
 from fcdiffusion.dataset import TestDataset
 torch.cuda.set_device(0)
 
+import os
+os.environ['CURL_CA_BUNDLE'] = ''
+
 
 def load_model_from_config(config, ckpt, device=torch.device("cuda"), verbose=False):
     print(f"Loading model from {ckpt}")
@@ -33,12 +36,12 @@ def load_model_from_config(config, ckpt, device=torch.device("cuda"), verbose=Fa
     return model
 
 
-# setting of model config and model checkpoint
+# set model configuration file
 yaml_file_path = "configs/model_config.yaml"
-# set the checkpoint path in the lightning_logs dir
-# the model checkpoint should be consistent with the "control_mode" parameter in the yaml config file
+
+# set the checkpoint path in the lightning_logs dir (the loaded model should be consistent
+# with the "control_mode" parameter in the yaml config file)
 ckpt_file_path = "lightning_logs/fcdiffusion_mid_pass_checkpoint/epoch=0-step=9999.ckpt"
-scale_factor = 0.18215
 
 # create mode
 config = OmegaConf.load(yaml_file_path)
@@ -48,11 +51,9 @@ assert model.control_mode in ckpt_file_path.split('/')[1], \
     'the checkpoint model is not consistent with the config file in control mode'
 model.eval()
 
-
-# setting of test image path and target prompt
+# set test image path and target prompt
 test_img_path = 'test_img.jpg'   # the path of the test image to be translated
-target_prompt = 'photo of an office room'  # the target text prompt for image-to-image translation
-target_prompt = target_prompt + ', best quality, highly detailed'
+target_prompt = 'photo of a bed room'  # the target text prompt for image-to-image translation
 test_res_num = 4
 
 
@@ -69,18 +70,3 @@ for step, batch in enumerate(dataloader):
     sample = sample.permute(1, 2, 0)
     sample = torch.clamp(sample, -1, 1)
     Image.fromarray(((sample.cpu().numpy() + 1) * 127.5).astype(np.uint8)).show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
