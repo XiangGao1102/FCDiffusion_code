@@ -352,7 +352,7 @@ class CLIPEmbeddingNoiseAugmentation(ImageConcatWithNoiseAugmentation):
         return z, noise_level
 
 
-if __name__== "__main__" :
-    model = FrozenOpenCLIPEmbedder().cuda()
-    prompt = 'a gentleman playing piano in a warm restaurant, a colorful oil painting'
-    z = model(prompt)
+# if __name__== "__main__" :
+#     model = FrozenOpenCLIPEmbedder().cuda()
+#     prompt = 'a gentleman playing piano in a warm restaurant, a colorful oil painting'
+#     z = model(prompt)
