@@ -63,3 +63,5 @@ Besides, our method uses the pretrained OpenCLIP text encoder, download the **op
                     <img src="pictures/open_clip_model.png" width="70%"> <br>
 		</div>
 </div>
+
+# Model training
