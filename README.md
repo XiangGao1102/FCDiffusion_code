@@ -49,3 +49,4 @@ Our model is based on the pretrained text-to-image latent diffusion model. Speci
 <pre><code>
 python tool_add_control_sd21.py ./models/v2-1_512-ema-pruned.ckpt ./models/FCDiffusion_ini.ckpt
 </code></pre>
+This script will create a ckpt file of our model with the parameters initialized from the pretrained Stable Diffusion v2-1-base. The created ckpt file named **FCDiffusion_ini.ckpt** will be in the **models** folder of the project, as shown below:
