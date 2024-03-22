@@ -42,3 +42,4 @@ Then, run the python script **training_data_prepare.py** to create the json file
 <pre><code>
 python training_data_prepare.py
 </code></pre>
+A json file **training_data.json** wil be created under the **datasets** folder, it 
