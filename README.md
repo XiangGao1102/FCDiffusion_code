@@ -34,6 +34,6 @@ pip install -r requirements.txt
 Since we do not train the large-scale latent diffusion model (LDM) from scratch but rather train a frequency-based control network of the pre-trained LDM, a small subset of LAION 5B is sufficient for our task. Therefore, we use **LAION Aesthetics 6.5+** which comprises 625K image-text pairs as the training set of our model. Download and put it in the **datasets** folder of the project as shown below:
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/training_set_structure.png" width="50%"> <br>
+                    <img src="pictures/training_set.png" width="50%"> <br>
 		</div>
 	    </div>
