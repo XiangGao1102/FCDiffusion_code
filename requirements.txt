@@ -14,3 +14,4 @@ open_clip_torch==2.0.2
 invisible-watermark>=0.1.5
 streamlit-drawable-canvas==0.8.0
 torchmetrics==0.6.0
+pillow==10.2.0
