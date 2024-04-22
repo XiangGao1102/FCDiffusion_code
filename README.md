@@ -26,7 +26,7 @@ We propose to realize versatile text-guided I2I from a novel frequency-domain pe
 Below is the overall model architecture, please refer to the paper (coming soon) for more technical details.
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/arch.jpg" width="100%"> <br>
+                    <img src="img/arch.jpg" width="100%"> <br>
                 </div>
             <p style="line-height:180%">Figure 1. The overall architecture of FCDiffusion, as well as details of important modules and operations. FCDiffusion comprises the pretrained LDM, a Frequency Filtering Module (FFM), and a FreqControlNet (FCNet). The FFM applies DCT filtering to the source image features, extracting the filtered image features carrying a specific DCT frequency band as control signal, which controls the denoising process of LDM through the FCNet. FCDiffusion integrates multiple control branches with different DCT filters in the FFM, these DCT filters extract different DCT frequency bands to control different I2I correlations (e.g., image style, structure, layout, contour, etc.).
 	    </p>
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 Since we do not train the large-scale latent diffusion model (LDM) from scratch but rather train a frequency-based control network of the pre-trained LDM, a small subset of LAION 5B is sufficient for our task. Therefore, we use **LAION Aesthetics 6.5+** which comprises 625K image-text pairs as the training set of our model. Download and put it in the **datasets** folder of the project as shown below:
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/training_set.png" width="70%"> <br>
+                    <img src="img/training_set.png" width="70%"> <br>
 		</div>
 </div>
 
@@ -68,7 +68,7 @@ python tool_add_control_sd21.py ./models/v2-1_512-ema-pruned.ckpt ./models/FCDif
 This script will create a ckpt file of our model with the parameters initialized from the pretrained Stable Diffusion v2-1-base. The created ckpt file named **FCDiffusion_ini.ckpt** will be in the **models** folder of the project, as shown below:
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/ckpt_file.png" width="70%"> <br>
+                    <img src="img/ckpt_file.png" width="70%"> <br>
 		</div>
 </div>
 The training of the model will be started from the generated FCDiffusion_ini.ckpt. <br>
@@ -76,7 +76,7 @@ The training of the model will be started from the generated FCDiffusion_ini.ckp
 Besides, our method uses the pretrained OpenCLIP text encoder, download the **open_clip_pytorch_model.bin** file [here](https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/tree/main) and put it in the **CLIP-ViT-H-14** folder of the project, as shown below:
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/open_clip_model.png" width="70%"> <br>
+                    <img src="img/open_clip_model.png" width="70%"> <br>
 		</div>
 </div>
 
@@ -101,7 +101,7 @@ python fcdiffusion_test.py
 # Results display
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/style_guided_content_creation.jpg" width="80%"> <br>
+                    <img src="img/style_guided_content_creation.jpg" width="80%"> <br>
                 </div>
             <p style="line-height:180%">Figure 2. Results of style-guided content creation realized with mini-frequency control. The image content is recreated according to the text prompt while the style of the translated image is transferred from the source image.
 	    </p>
@@ -110,7 +110,7 @@ python fcdiffusion_test.py
 
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/image semantic manipulation.jpg" width="80%"> <br>
+                    <img src="img/image semantic manipulation.jpg" width="80%"> <br>
                 </div>
             <p style="line-height:180%">Figure 3. Results of image semantic manipulation realized with low-frequency control. The semantics of the source image is manipulated according to the text prompt while the image style and spatial structure are maintained.
 	    </p>
@@ -119,7 +119,7 @@ python fcdiffusion_test.py
 
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/image style translation.jpg" width="80%"> <br>
+                    <img src="img/image style translation.jpg" width="80%"> <br>
                 </div>
             <p style="line-height:180%">Figure 4. Results of image style translation realized with high-frequency control. The image style (appearance) is modified as per the text prompt while the main contours of the source image are preserved.
 	    </p>
@@ -128,7 +128,7 @@ python fcdiffusion_test.py
 
 <div style="padding-left: 4%; padding-right: 4%;">
                 <div align="center">
-                    <img src="pictures/image scene translation.jpg" width="80%"> <br>
+                    <img src="img/image scene translation.jpg" width="80%"> <br>
                 </div>
             <p style="line-height:180%">Figure 5. Results of image scene translation realized with mid-frequency control. The image scene is translated according to the text prompt. In this scenario, the layout of the source image is preserved while the lower-frequency image style and higher-frequency image contours are not restricted.
 	    </p>
