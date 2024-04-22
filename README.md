@@ -1,4 +1,20 @@
-# Frequency-Controlled-Diffusion-Model
+# FCDiffusion
+Code of paper "Frequency-Controlled Diffusion Model for Versatile Text-Guided Image-to-Image Translation" accepted by AAAI 2024.
+
+# Citation #
+<pre>
+<code>
+@inproceedings{gao2024frequency,
+  title={Frequency-Controlled Diffusion Model for Versatile Text-Guided Image-to-Image Translation},
+  author={Gao, Xiang and Xu, Zhengbo and Zhao, Junhan and Liu, Jiaying},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={3},
+  pages={1824--1832},
+  year={2024}
+}
+</code>
+</pre>
 
 # Introduction
 **This project tackles the problem of text-guided image-to-image translation (I2I), i.e., translating a source image with a natural-language text prompt.** We harness the immense generative power of the pre-trained large-scale text-to-image diffusion model and extend it from text-to-image generation to text-guided I2I, providing intelligent tools for image manipulation tasks. <br>
