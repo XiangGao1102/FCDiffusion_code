@@ -65,3 +65,8 @@ Besides, our method uses the pretrained OpenCLIP text encoder, download the **op
 </div>
 
 # Model training
+Run the python script **fcdiffusion_train.py** to start training:
+<pre><code>
+python fcdiffusion_train.py
+</code></pre>
+The 
