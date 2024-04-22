@@ -38,14 +38,14 @@ Since we do not train the large-scale latent diffusion model (LDM) from scratch 
 		</div>
 </div>
 
-Then, run the python script **training_data_prepare.py** to create the json file of the training dataset:
+Then, run the Python script **training_data_prepare.py** to create the json file of the training dataset:
 <pre><code>
 python training_data_prepare.py
 </code></pre>
 A json file **training_data.json** wil be created under the **datasets** folder. It records the image path and the text prompt of each image-text pair of the training set, and is used in the training process.
 
 # Download the required model
-Our model is based on the pretrained text-to-image latent diffusion model. Specifically, we use **Stable Diffusion v2-1-base** model in our method. Download the model checkpoint file **v2-1_512-ema-pruned.ckpt** [here](https://huggingface.co/stabilityai/stable-diffusion-2-1-base/tree/main) and put it in the **models** folder of the project. Then, run the python script **tool_add_control_sd21.py** to create our initialized model: 
+Our model is based on the pretrained text-to-image latent diffusion model. Specifically, we use **Stable Diffusion v2-1-base** model in our method. Download the model checkpoint file **v2-1_512-ema-pruned.ckpt** [here](https://huggingface.co/stabilityai/stable-diffusion-2-1-base/tree/main) and put it in the **models** folder of the project. Then, run the Python script **tool_add_control_sd21.py** to create our initialized model: 
 <pre><code>
 python tool_add_control_sd21.py ./models/v2-1_512-ema-pruned.ckpt ./models/FCDiffusion_ini.ckpt
 </code></pre>
@@ -71,7 +71,13 @@ Before training, set the **control_mode** parameter in the model_config.yaml con
 - The "mid_pass" mode realizes image scene translation with mid-frequency control.
 - The "high-pass" mode realizes image style translation with high-frequency control.
 
-Then, run the python script **fcdiffusion_train.py** to start training:
+Then, run the Python script **fcdiffusion_train.py** to start training:
 <pre><code>
 python fcdiffusion_train.py
+</code></pre>
+
+# Model inference
+Inference model for text-driven image-to-image translation by running the Python script **fcdiffusion_test.py**:
+<pre><code>
+python fcdiffusion_test.py
 </code></pre>
