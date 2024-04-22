@@ -11,7 +11,7 @@ torch.cuda.set_device(0)
 # Configs
 resume_path = 'models/FCDiffusion_ini.ckpt'
 batch_size = 4
-logger_freq = 200
+logger_freq = 500
 learning_rate = 1e-5
 sd_locked = True
 val_every_n_train_steps = 2000
