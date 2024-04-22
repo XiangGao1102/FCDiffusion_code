@@ -1,4 +1,4 @@
-# FCDiffusion
+# Frequency-Controlled Diffusion Model for Text-Guided Image Translation
 Code of paper "Frequency-Controlled Diffusion Model for Versatile Text-Guided Image-to-Image Translation" accepted by AAAI 2024.
 
 # Citation #
