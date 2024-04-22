@@ -97,3 +97,36 @@ Inference model for text-driven image-to-image translation by running the Python
 <pre><code>
 python fcdiffusion_test.py
 </code></pre>
+
+# Results display
+
+            <div style="padding-left: 4%; padding-right: 4%;">
+                <div align="center">
+                    <img src="img/style_guided_content_creation.jpg" width="100%"> <br>
+                    <p style="line-height:150%">
+					Figure 2. Results of style-guided content creation realized with mini-frequency control. The image content is recreated according to the text prompt while the style of the translated image is transferred from the source image.
+					</p>
+                </div>
+			<br>
+
+                <div align="center">
+                    <img src="img/image semantic manipulation.jpg" width="100%"> <br>
+                    <p style="line-height:150%">
+					Figure 3. Results of image semantic manipulation realized with low-frequency control. The semantics of the source image is manipulated according to the text prompt while the image style and spatial structure are maintained.
+					</p>
+                </div>
+
+                <div align="center">
+                    <img src="img/image style translation.jpg" width="100%"> <br>
+                    <p style="line-height:150%">
+					Figure 4. Results of image style translation realized with high-frequency control. The image style (appearance) is modified as per the text prompt while the main contours of the source image are transferred to the target image.
+					</p>
+                </div>
+
+                <div align="center">
+                    <img src="img/image scene translation.jpg" width="100%"> <br>
+                    <p style="line-height:150%">
+					Figure 5. Results of image scene translation realized with mid-frequency control. The image scene is translated according to the text prompt. In this scenario, the image style and contours are not restricted, only the image layout is preserved.
+					</p>
+                </div>
+
