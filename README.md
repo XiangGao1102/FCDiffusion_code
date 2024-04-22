@@ -65,8 +65,13 @@ Besides, our method uses the pretrained OpenCLIP text encoder, download the **op
 </div>
 
 # Model training
-Run the python script **fcdiffusion_train.py** to start training:
+Before training, set the **control_mode** parameter in the model_config.yaml configuration file. The parameter must be one of "**mini_pass**", "**low_pass**", "**mid_pass**", and "**high_pass**". <be>
+- The "mini_pass" mode realizes style-guided content creation with mini-frequency control. 
+- The "low_pass" mode realizes image semantic manipulation with low-frequency control.
+- The "mid_pass" mode realizes image scene translation with mid-frequency control.
+- The "high-pass" mode realizes image style translation with high-frequency control.
+
+Then, run the python script **fcdiffusion_train.py** to start training:
 <pre><code>
 python fcdiffusion_train.py
 </code></pre>
-The 
