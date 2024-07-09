@@ -1,5 +1,5 @@
 # Frequency-Controlled Diffusion Model for Versatile Text-Guided Image-to-Image Translation
-This is the code of the paper "Frequency-Controlled Diffusion Model for Versatile Text-Guided Image-to-Image Translation" accepted by AAAI 2024.
+This is the code of the paper "Frequency-Controlled Diffusion Model for Versatile Text-Guided Image-to-Image Translation" accepted by AAAI 2024. *[paper link](https://arxiv.org/abs/2407.03006)*
 
 # Citation #
 <pre>
