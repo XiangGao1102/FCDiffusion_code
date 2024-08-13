@@ -35,10 +35,11 @@ Below is the overall model architecture, please refer to the paper (coming soon)
 # Environment
 First, create a new conda virtual environment: <br>
 <pre><code>
-conda create -n env_name python=3.8
+conda create -n FCDiffusion python=3.8
 </code></pre>
 Then, install pytorch related packages using conda: <br>
 <pre><code>
+conda activate FCDiffusion
 conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
 </code></pre>
 Last, install the required packages in the requirements.txt: <br>
