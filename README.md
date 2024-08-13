@@ -40,7 +40,7 @@ conda create -n FCDiffusion python=3.8
 Then, install pytorch related packages using conda: <br>
 <pre><code>
 conda activate FCDiffusion
-conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
 </code></pre>
 Last, install the required packages in the requirements.txt: <br>
 <pre><code>
